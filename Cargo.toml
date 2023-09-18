@@ -1,0 +1,2 @@
+[workspace]
+members = ["packages/fuels_beta3/native"]

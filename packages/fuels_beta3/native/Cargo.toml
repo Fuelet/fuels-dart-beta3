@@ -1,0 +1,13 @@
+[package]
+name = "fuels_beta3"
+version = "0.0.0"
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib", "cdylib"]
+
+[build-dependencies]
+flutter_rust_bridge_codegen = "=1.75.3"
+
+[dependencies]
+flutter_rust_bridge = "=1.75.3"
