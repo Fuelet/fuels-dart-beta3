@@ -1,0 +1,25 @@
+name: flutter_fuels_beta3
+description: A new Flutter FFI plugin project.
+version: 0.0.1
+homepage: https://github.com/Fuelet/fuels-dart-beta3/tree/main/packages/flutter_fuels_beta3
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+  flutter: ">=2.11.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  fuels_beta3: ^1.0.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        ffiPlugin: true
+      ios:
+        ffiPlugin: true
