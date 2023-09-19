@@ -1,6 +1,6 @@
 name: fuels_beta3
 description: Dart FFI bridge to Fuel Rust SDK for beta-3
-version: 1.0.0
+version: 1.2.0
 homepage: https://github.com/Fuelet/fuels-dart-beta3/tree/main/packages/fuels_beta3
 
 environment:
