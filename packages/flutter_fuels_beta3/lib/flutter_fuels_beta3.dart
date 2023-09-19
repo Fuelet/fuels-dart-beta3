@@ -1,1 +1,2 @@
-export 'package:fuels_beta3/fuels_beta3.dart';
+export 'fuel_utils/fuel_utils.dart';
+export 'wallet/fuel_wallet.dart';

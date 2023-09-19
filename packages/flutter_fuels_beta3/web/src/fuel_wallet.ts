@@ -144,5 +144,5 @@ function injectObject(target: object, obj: object, name: PropertyKey) {
     }
 }
 
-injectObject(window, new WalletInterface(), "flutter_fuels_wallet");
-injectObject(window, new FuelsUtils(), "flutter_fuels_utils");
+injectObject(window, new WalletInterface(), "flutter_fuels_beta3_wallet");
+injectObject(window, new FuelsUtils(), "flutter_fuels_beta3_utils");
