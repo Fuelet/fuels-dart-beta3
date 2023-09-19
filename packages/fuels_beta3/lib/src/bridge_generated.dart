@@ -1809,7 +1809,8 @@ class FuelsBeta3Wire implements FlutterRustBridgeWireBase {
 
   late final _wire_new_from_private_key__static_method__WalletUnlockedPtr =
       _lookup<
-              ffi.NativeFunction<
+              ffi
+              .NativeFunction<
                   ffi.Void Function(ffi.Int64, ffi.Pointer<wire_uint_8_list>,
                       ffi.Pointer<wire_Provider>)>>(
           'wire_new_from_private_key__static_method__WalletUnlocked');
@@ -2153,9 +2154,9 @@ class FuelsBeta3Wire implements FlutterRustBridgeWireBase {
   }
 
   late final _new_uint_8_list_0Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<wire_uint_8_list> Function(
-              ffi.Int32)>>('new_uint_8_list_0');
+          ffi
+          .NativeFunction<ffi.Pointer<wire_uint_8_list> Function(ffi.Int32)>>(
+      'new_uint_8_list_0');
   late final _new_uint_8_list_0 = _new_uint_8_list_0Ptr
       .asFunction<ffi.Pointer<wire_uint_8_list> Function(int)>();
 
