@@ -1,5 +1,5 @@
 name: flutter_fuels_beta3
-description: A new Flutter FFI plugin project.
+description: Flutter Plugin for Fuel SDK beta-3
 version: 0.0.1
 homepage: https://github.com/Fuelet/fuels-dart-beta3/tree/main/packages/flutter_fuels_beta3
 
@@ -10,16 +10,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
   plugin_platform_interface: ^2.0.2
   fuels_beta3: ^1.0.0
+  js: ^0.6.5
 
 dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+  assets:
+    - packages/flutter_fuels_beta3/js/wallet.js
   plugin:
     platforms:
       android:
         ffiPlugin: true
       ios:
         ffiPlugin: true
+      web:
+        pluginClass: JsWalletInjector
+        fileName: js_wallet_injector.dart
