@@ -1,0 +1,45 @@
+name: Run flutter_rust_bridge codegen
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  codegen:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - uses: ./.github/actions/initialize
+
+      - name: Setup Just
+        uses: extractions/setup-just@v1
+        with:
+          just-version: 1.9.0
+
+      - name: Install FRB
+        run: cargo install --version 1.75.3 flutter_rust_bridge_codegen
+
+      - name: Install cargo-expand
+        run: cargo install cargo-expand
+
+      - name: FRB codegen
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          command: melos run frb-gen
+
+      - name: Build web
+        run: melos run build:web
+
+      - name: Commit
+        run: |
+          git add -A
+          git config --global user.name 'Github Actions'
+          git config --global user.email 'actions@github.com'
+          git commit -am "Codegen" || echo "Nothing to commit"
+          git push || echo "Nothing to push"

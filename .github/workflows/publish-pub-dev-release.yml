@@ -1,0 +1,25 @@
+name: Publish pub.dev release
+# See https://dart.dev/tools/pub/automated-publishing
+
+on:
+  workflow_call:
+    inputs:
+      package_name:
+        description: 'Package to publish'
+        required: true
+        type: string
+
+jobs:
+  publish_pub_dev_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+      - uses: bluefireteam/melos-action@v2
+        with:
+          melos-version: '3.1.0'
+      - name: Dry-run publish to pub.dev
+        run: melos publish -y --dry-run --no-published --scope=${{ inputs.package_name }}
+      - name: Publish to pub.dev
+        run: melos publish -y --no-dry-run --no-published --scope=${{ inputs.package_name }}

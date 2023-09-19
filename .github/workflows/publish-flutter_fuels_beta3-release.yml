@@ -1,0 +1,16 @@
+name: Publish flutter_fuels_beta3 package release
+
+on:
+  push:
+    tags:
+      - "flutter_fuels_beta3-*"
+
+jobs:
+  publish_github_release:
+    uses: ./.github/workflows/publish-github-release.yml
+
+#  publish_pub_dev_release:
+#    needs: publish_github_release
+#    uses: ./.github/workflows/publish-pub-dev-release.yml
+#    with:
+#      package_name: flutter_fuels_beta3
