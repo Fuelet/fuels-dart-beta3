@@ -1,6 +1,6 @@
 name: flutter_fuels_beta3
 description: Flutter Plugin for Fuel SDK beta-3
-version: 0.0.4
+version: 0.0.4+1
 homepage: https://github.com/Fuelet/fuels-dart-beta3/tree/main/packages/flutter_fuels_beta3
 
 environment:

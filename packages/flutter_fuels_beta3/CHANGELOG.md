@@ -1,3 +1,7 @@
+## 0.0.4+1
+
+ - **FIX**: rename the web wallet injector. ([bf2b5a42](https://github.com/Fuelet/fuels-dart-beta3/commit/bf2b5a425b8cdc5a507d8e9371f22aacd9a763ca))
+
 ## 0.0.4
 
  - **FEAT**: rename web wallet. ([c0f3c9a1](https://github.com/Fuelet/fuels-dart-beta3/commit/c0f3c9a1c00e708c5b312b050d295eacca5ae59e))

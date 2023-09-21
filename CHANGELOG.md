@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`flutter_fuels_beta3` - `v0.0.4+1`](#flutter_fuels_beta3---v0041)
+
+---
+
+#### `flutter_fuels_beta3` - `v0.0.4+1`
+
+ - **FIX**: rename the web wallet injector. ([bf2b5a42](https://github.com/Fuelet/fuels-dart-beta3/commit/bf2b5a425b8cdc5a507d8e9371f22aacd9a763ca))
+
+
+## 2023-09-21
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`flutter_fuels_beta3` - `v0.0.4`](#flutter_fuels_beta3---v004)
  - [`fuels_beta3` - `v1.2.1`](#fuels_beta3---v121)
 
