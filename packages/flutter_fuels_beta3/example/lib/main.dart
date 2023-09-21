@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter_fuels_beta3/flutter_fuels_beta3.dart' as flutter_fuels_beta3;
+import 'package:flutter/material.dart';
+import 'package:flutter_fuels_beta3/flutter_fuels_beta3.dart';
+
+const _betaApiUrl = 'https://beta-3.fuel.network';
 
 void main() {
   runApp(const MyApp());
@@ -15,54 +17,53 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late int sumResult;
-  late Future<int> sumAsyncResult;
+  static const _defaultWalletAddressTitle = 'not generated yet';
+
+  String _bech32Address = _defaultWalletAddressTitle;
+  String _b256Address = _defaultWalletAddressTitle;
+  String _signedMessage = 'message is not signed yet';
 
   @override
   void initState() {
     super.initState();
-    sumResult = flutter_fuels_beta3.sum(1, 2);
-    sumAsyncResult = flutter_fuels_beta3.sumAsync(3, 4);
   }
 
   @override
   Widget build(BuildContext context) {
     const textStyle = TextStyle(fontSize: 25);
-    const spacerSmall = SizedBox(height: 10);
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Native Packages'),
+          title: const Text('Fuel SDK'),
         ),
         body: SingleChildScrollView(
           child: Container(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(16),
+            alignment: Alignment.center,
             child: Column(
               children: [
-                const Text(
-                  'This calls a native function through FFI that is shipped as source in the package. '
-                  'The native code is built as part of the Flutter Runner build.',
-                  style: textStyle,
-                  textAlign: TextAlign.center,
-                ),
-                spacerSmall,
                 Text(
-                  'sum(1, 2) = $sumResult',
+                  'bech32: $_bech32Address',
                   style: textStyle,
                   textAlign: TextAlign.center,
                 ),
-                spacerSmall,
-                FutureBuilder<int>(
-                  future: sumAsyncResult,
-                  builder: (BuildContext context, AsyncSnapshot<int> value) {
-                    final displayValue =
-                        (value.hasData) ? value.data : 'loading';
-                    return Text(
-                      'await sumAsync(3, 4) = $displayValue',
-                      style: textStyle,
-                      textAlign: TextAlign.center,
-                    );
-                  },
+                const SizedBox(height: 8),
+                Text(
+                  'b256: $_b256Address',
+                  style: textStyle,
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'signed message: "$_signedMessage"',
+                  style: textStyle,
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 8),
+                OutlinedButton(
+                  onPressed: _generateWallet,
+                  child: const Text('Generate address'),
                 ),
               ],
             ),
@@ -70,5 +71,17 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
     );
+  }
+
+  Future<void> _generateWallet() async {
+    final wallet = await FuelWallet.generateNewWallet(networkUrl: _betaApiUrl);
+    // test utils
+    final b256 = await FuelUtils.b256FromBech32String(wallet.bech32Address);
+    final signedMessage = await wallet.signMessage(message: 'message');
+    setState(() {
+      _bech32Address = wallet.bech32Address;
+      _b256Address = b256;
+      _signedMessage = signedMessage;
+    });
   }
 }
