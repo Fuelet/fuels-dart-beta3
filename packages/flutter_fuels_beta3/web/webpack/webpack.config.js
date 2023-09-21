@@ -3,7 +3,7 @@ const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 module.exports = {
     mode: "production",
     entry: {
-        wallet: path.resolve(__dirname, "..", "src", "fuel_wallet.ts"),
+        beta3_wallet: path.resolve(__dirname, "..", "src", "fuel_wallet_beta3.ts"),
     },
     output: {
         path: path.join(__dirname, "../../lib/js"),

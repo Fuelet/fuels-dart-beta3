@@ -36,7 +36,7 @@ function walletToJson(wallet: WalletUnlocked, mnemonic?: string): WalletObject {
     };
 }
 
-class WalletInterface {
+class Beta3WalletInterface {
     generateNewWallet(): WalletObject {
         let mnemonic = Mnemonic.generate(16);
         return this.newWalletFromMnemonic(mnemonic);
@@ -111,7 +111,7 @@ class WalletInterface {
     }
 }
 
-class FuelsUtils {
+class Beta3FuelsUtils {
     bech32FromB256String(b256Address: string): Bech32Address {
         return toBech32(b256Address);
     }
@@ -144,5 +144,5 @@ function injectObject(target: object, obj: object, name: PropertyKey) {
     }
 }
 
-injectObject(window, new WalletInterface(), "flutter_fuels_beta3_wallet");
-injectObject(window, new FuelsUtils(), "flutter_fuels_beta3_utils");
+injectObject(window, new Beta3WalletInterface(), "flutter_fuels_beta3_wallet");
+injectObject(window, new Beta3FuelsUtils(), "flutter_fuels_beta3_utils");

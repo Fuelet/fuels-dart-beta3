@@ -21,7 +21,7 @@ dev_dependencies:
 
 flutter:
   assets:
-    - packages/flutter_fuels_beta3/js/wallet.js
+    - packages/flutter_fuels_beta3/js/beta3_wallet.js
   plugin:
     platforms:
       android:
