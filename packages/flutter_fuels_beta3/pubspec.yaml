@@ -29,5 +29,5 @@ flutter:
       ios:
         ffiPlugin: true
       web:
-        pluginClass: JsWalletInjector
-        fileName: js_wallet_injector.dart
+        pluginClass: JsBeta3WalletInjector
+        fileName: js_beta3_wallet_injector.dart

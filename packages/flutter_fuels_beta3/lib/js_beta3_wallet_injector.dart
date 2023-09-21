@@ -6,7 +6,7 @@ import 'dart:html';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:js/js.dart';
 
-class JsWalletInjector {
+class JsBeta3WalletInjector {
   static void registerWith(Registrar registrar) {
     _loadScript('assets/packages/flutter_fuels_beta3/js/beta3_wallet.js');
   }
