@@ -1,3 +1,7 @@
+## 0.0.5+1
+
+ - **FIX**: rename js interop libs. ([aaba771b](https://github.com/Fuelet/fuels-dart-beta3/commit/aaba771b1454a013558a182504f7ab2045b78ad7))
+
 ## 0.0.5
 
  - **FIX**: upgrade semver dependency. ([9489f2a0](https://github.com/Fuelet/fuels-dart-beta3/commit/9489f2a01f98f27089019521cd36eb00e3b28c2b))

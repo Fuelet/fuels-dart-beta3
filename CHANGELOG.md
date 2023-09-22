@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`flutter_fuels_beta3` - `v0.0.5+1`](#flutter_fuels_beta3---v0051)
+
+---
+
+#### `flutter_fuels_beta3` - `v0.0.5+1`
+
+ - **FIX**: rename js interop libs. ([aaba771b](https://github.com/Fuelet/fuels-dart-beta3/commit/aaba771b1454a013558a182504f7ab2045b78ad7))
+
+
+## 2023-09-22
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`flutter_fuels_beta3` - `v0.0.5`](#flutter_fuels_beta3---v005)
 
 ---
