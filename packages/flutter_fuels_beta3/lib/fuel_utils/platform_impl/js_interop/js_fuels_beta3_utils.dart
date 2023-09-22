@@ -1,5 +1,5 @@
 @JS('flutter_fuels_beta3_utils')
-library js_fuels_utils;
+library js_fuels_beta3_utils;
 
 import 'package:js/js.dart';
 

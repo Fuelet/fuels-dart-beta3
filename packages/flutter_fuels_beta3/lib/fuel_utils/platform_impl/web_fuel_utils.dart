@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter_fuels_beta3/model/transaction.dart';
 
 import 'base_fuel_utils.dart';
-import 'js_interop/js_fuels_utils.dart' as js_utils;
+import 'js_interop/js_fuels_beta3_utils.dart' as js_utils;
 
 class FuelUtilsImpl extends BaseFuelUtils {
   @override

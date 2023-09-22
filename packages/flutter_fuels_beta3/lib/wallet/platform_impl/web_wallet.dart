@@ -5,7 +5,7 @@ import 'package:flutter_fuels_beta3/model/call_result.dart';
 import 'package:js/js_util.dart';
 
 import 'base_wallet.dart';
-import 'js_interop/js_fuels_wallet.dart' as js_wallet;
+import 'js_interop/js_fuels_beta3_wallet.dart' as js_wallet;
 
 class FuelWalletImpl extends BaseWallet {
   @override

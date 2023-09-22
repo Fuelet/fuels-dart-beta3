@@ -1,5 +1,5 @@
 @JS('flutter_fuels_beta3_wallet')
-library js_fuels_wallet;
+library js_fuels_beta3_wallet;
 
 import 'package:js/js.dart';
 
