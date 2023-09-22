@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-09-22
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`flutter_fuels_beta3` - `v0.0.5`](#flutter_fuels_beta3---v005)
+
+---
+
+#### `flutter_fuels_beta3` - `v0.0.5`
+
+ - **FIX**: upgrade semver dependency. ([9489f2a0](https://github.com/Fuelet/fuels-dart-beta3/commit/9489f2a01f98f27089019521cd36eb00e3b28c2b))
+ - **FEAT**: rename the library. ([a5c34c51](https://github.com/Fuelet/fuels-dart-beta3/commit/a5c34c51cbb8a1443141a6adfc0e0931b0dc6ca0))
+
+
 ## 2023-09-21
 
 ### Changes

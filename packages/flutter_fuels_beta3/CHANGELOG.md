@@ -1,3 +1,8 @@
+## 0.0.5
+
+ - **FIX**: upgrade semver dependency. ([9489f2a0](https://github.com/Fuelet/fuels-dart-beta3/commit/9489f2a01f98f27089019521cd36eb00e3b28c2b))
+ - **FEAT**: rename the library. ([a5c34c51](https://github.com/Fuelet/fuels-dart-beta3/commit/a5c34c51cbb8a1443141a6adfc0e0931b0dc6ca0))
+
 ## 0.0.4+1
 
  - **FIX**: rename the web wallet injector. ([bf2b5a42](https://github.com/Fuelet/fuels-dart-beta3/commit/bf2b5a425b8cdc5a507d8e9371f22aacd9a763ca))
