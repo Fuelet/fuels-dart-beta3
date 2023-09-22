@@ -1,5 +1,5 @@
 @JS()
-library fuel_wallet;
+library fuel_wallet_beta3;
 
 import 'dart:html';
 
