@@ -8,10 +8,10 @@ import 'package:js/js.dart';
 
 class JsBeta3WalletInjector {
   static void registerWith(Registrar registrar) {
-    _loadScript('assets/packages/flutter_fuels_beta3/js/beta3_wallet.js');
+    _loadScriptBeta3('assets/packages/flutter_fuels_beta3/js/beta3_wallet.js');
   }
 
-  static void _loadScript(String path) {
+  static void _loadScriptBeta3(String path) {
     // Create a new script element
     ScriptElement script = ScriptElement();
     script.type = 'text/javascript';
